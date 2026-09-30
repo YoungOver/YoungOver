@@ -1,33 +1,45 @@
-Backend and systems engineer. Go and Python in production, low-latency services, and the unusual part: an electronics and instrumentation background, so I am just as comfortable with a CAD assembly, an ESP32 board or a neural network as with a Kafka pipeline.
+### Проекты
 
-- **Backend:** Go (Middle, 2+ years commercial), Python, gRPC, REST, Kafka, PostgreSQL, Redis
-- **Infra:** Docker, Kubernetes, GitLab CI / GitHub Actions, Prometheus, Grafana, Linux
-- **ML:** machine and deep learning, PyTorch, signal processing (Innopolis University, retraining program)
-- **Frontend:** React, TypeScript, Tailwind, Three.js / WebGL
-- **Engineering:** SolidWorks, KOMPAS-3D, AutoCAD, CadQuery, circuit design, embedded C++ on ESP32
-- **Education:** Saint Petersburg Electrotechnical University "LETI", electronics, instrument engineering (MSc in progress)
+Каждый репозиторий собирается одной командой, проходит тесты в CI и описывает в README, что измерено и как это повторить.
 
----
+#### Веб-продукты
 
-#### Featured
+| | |
+|---|---|
+| [**krot**](https://github.com/YoungOver/krot) | Туннели к localhost: edge и агент на Go с мультиплексированием потоков, авторизация с ротацией refresh-токенов, кабинет на React 19 с инспектором запросов и WebGL-лендингом. [Демо](https://youngover.github.io/krot/) |
+| [**web-studio**](https://github.com/YoungOver/web-studio) | Десять сайтов на React 19, TypeScript, Tailwind 4, shadcn/ui, GSAP и React Three Fiber |
+| [**threejs-viz**](https://github.com/YoungOver/threejs-viz) | Анимации товаров и 3D-интерьеры на Three.js, детерминированная запись видео |
+| [**web-qa-autotests**](https://github.com/YoungOver/web-qa-autotests) | Аудит сборок на Playwright: ошибки JS, сеть, SEO, доступность |
 
-| Project | What it shows | Numbers |
+#### Системы на Go
+
+| | | |
 |---|---|---|
-| [**orderbook-engine**](https://github.com/YoungOver/orderbook-engine) | Matching engine in Go: single-writer loops, group-commit journal with crash recovery, SSE market data | 3.6M orders/s core, 95k HTTP req/s, 433k records replayed in 96 ms |
-| [**logbroker**](https://github.com/YoungOver/logbroker) | Kafka-style broker: segmented commit log, sparse index, sendfile fetch with long polling, group-commit fsync, consumer groups | 1.22M msg/s, 559 MB/s, restart over 9.4 GB in 2.4 s |
-| [**tsdb-gorilla**](https://github.com/YoungOver/tsdb-gorilla) | Time-series DB: Gorilla compression, sharded store, group-commit WAL, zero-alloc line protocol parser | 10M samples/s ingest, 0.4 to 3 bytes/sample, 53k queries/s |
-| [**geo-dispatch**](https://github.com/YoungOver/geo-dispatch) | Real-time courier location index: 17-byte UDP pings, sharded grid, ring-based nearest search | 467k pings/s while serving 25k dispatch queries/s |
-| [**web-studio**](https://github.com/YoungOver/web-studio) | 10 production-style sites: React 19, Tailwind 4, shadcn/ui, GSAP, React Three Fiber | Lighthouse-friendly, mobile first |
-| [**cad-engineering**](https://github.com/YoungOver/cad-engineering) | Mechanical design as code: CadQuery assemblies, ESKD drawings, sheet metal flat patterns, DXF plans | STEP / STL / DXF from one script |
-| [**esp32-greenhouse**](https://github.com/YoungOver/esp32-greenhouse) | ESP32 firmware with web UI and MQTT, schematic generated from code | |
-| [**python-automation**](https://github.com/YoungOver/python-automation) | aiogram booking bot, async scraper to Excel, Google Sheets automation | |
-| [**threejs-viz**](https://github.com/YoungOver/threejs-viz) | Three.js product animation and interior 3D with a deterministic video recorder | |
-| [**data-analytics**](https://github.com/YoungOver/data-analytics) | Excel financial model with live formulas, pandas sales report | |
+| [**logbroker**](https://github.com/YoungOver/logbroker) | Брокер сообщений: сегментированный журнал, разреженный индекс, sendfile, групповой fsync, группы потребителей | 1,22 млн сообщ./с, перезапуск на 9,4 ГБ за 2,4 с |
+| [**tsdb-gorilla**](https://github.com/YoungOver/tsdb-gorilla) | Хранилище временных рядов: сжатие Gorilla, шардированная память, WAL с групповым коммитом | 10 млн точек/с, 0,4–3 байта на точку |
+| [**orderbook-engine**](https://github.com/YoungOver/orderbook-engine) | Движок сопоставления заявок: однопоточные циклы, журнал с восстановлением после сбоя, SSE | 3,6 млн заявок/с в ядре |
+| [**geo-dispatch**](https://github.com/YoungOver/geo-dispatch) | Индекс местоположения курьеров: UDP-пинги по 17 байт, шардированная сетка, поиск ближайших | 467 тыс. пингов/с при 25 тыс. запросов/с |
+
+#### Встраиваемые системы и инженерия
+
+| | |
+|---|---|
+| [**foc-g431**](https://github.com/YoungOver/foc-g431) | Бездатчиковое векторное управление двигателем на STM32G431: регистры без HAL, наблюдатель потока и ФАПЧ, запуск с демпфированием, тесты против модели двигателя |
+| [**esp32-greenhouse**](https://github.com/YoungOver/esp32-greenhouse) | Контроллер теплицы на ESP32: прошивка с веб-интерфейсом и MQTT, схема из кода |
+| [**cad-engineering**](https://github.com/YoungOver/cad-engineering) | Конструирование кодом: сборки на CadQuery, чертежи по ЕСКД, развёртки, DXF |
+
+#### Автоматизация и данные
+
+| | |
+|---|---|
+| [**python-automation**](https://github.com/YoungOver/python-automation) | Telegram-бот для записи на aiogram 3, асинхронный парсер в Excel, Google Sheets |
+| [**shorts-factory**](https://github.com/YoungOver/shorts-factory) | Конвейер «текст → вертикальное видео»: озвучка, анимированные кадры, ffmpeg |
+| [**data-analytics**](https://github.com/YoungOver/data-analytics) | Финансовая модель в Excel с живыми формулами, отчёт по продажам на pandas |
+| [**html5-pipe-puzzle**](https://github.com/YoungOver/html5-pipe-puzzle) | Головоломка на Canvas 2D для промо-страниц и Telegram Mini Apps |
 
 <p>
+<img src="https://raw.githubusercontent.com/YoungOver/krot/main/docs/hero.png" width="49%">
+<img src="https://raw.githubusercontent.com/YoungOver/foc-g431/main/docs/response.png" width="49%">
 <img src="https://raw.githubusercontent.com/YoungOver/logbroker/main/docs/bench.png" width="49%">
 <img src="https://raw.githubusercontent.com/YoungOver/tsdb-gorilla/main/docs/bench.png" width="49%">
-<img src="https://raw.githubusercontent.com/YoungOver/orderbook-engine/main/docs/bench.png" width="49%">
-<img src="https://raw.githubusercontent.com/YoungOver/geo-dispatch/main/docs/demo.png" width="49%">
 </p>
-
