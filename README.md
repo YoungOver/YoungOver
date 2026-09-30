@@ -1,5 +1,3 @@
-### Hi, I'm Idris 👋
-
 Backend and systems engineer. Go and Python in production, low-latency services, and the unusual part: an electronics and instrumentation background, so I am just as comfortable with a CAD assembly, an ESP32 board or a neural network as with a Kafka pipeline.
 
 - **Backend:** Go (Middle, 2+ years commercial), Python, gRPC, REST, Kafka, PostgreSQL, Redis
@@ -33,8 +31,3 @@ Backend and systems engineer. Go and Python in production, low-latency services,
 <img src="https://raw.githubusercontent.com/YoungOver/geo-dispatch/main/docs/demo.png" width="49%">
 </p>
 
-#### How I work
-
-I measure before I optimise, write the test that would have caught the bug, and leave a README that lets the next person run the thing in five minutes.
-
-Open to backend roles and freelance projects.
